@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEKS3FB751"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZEKS3FB751');
+  </script>
+
+  <title><%= pdf.slice(0, -4) %></title>
+  <link rel="icon" href="/static/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Read the <%= pdf.slice(0, -4) %> now!">
+  <meta name="keywords" content="Spectral,host,PDF,Gallery,Unspoken,Content,<%= pdf.slice(0, -4) %>">
+  <meta name="author" content="Spectral.host">
+  <meta name="theme-color" content="#8c52ff">
+  <meta name="msapplication-navbutton-color" content="#8c52ff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#8c52ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="<%= pdf.slice(0, -4) %>">
+  <meta name="apple-mobile-web-app-title" content="<%= pdf.slice(0, -4) %>">
+  <meta name="msapplication-starturl" content="https://www.spectral.host/pdf/<%= pdf %>">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8556022091859081" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="intro">
+    <h1><%= pdf.slice(0, -4) %></h1>
+  </div>
+  <div style="width: calc(100% - 40px)" class="card">
+    <p style="text-align: left;"><%= desc %></p>
+    <br>
+    <div style="display: flex;justify-content: center;text-align: center;">
+      <a href="/" class="button" style="width: calc(50% - 20px); display: block;">Back</a>
+      <a href="/pdfs/<%= pdf %>" class="button" style="margin-left: 10px; width: calc(50% - 20px); display: block;">Download</a>
+    </div>
+  </div>
+  <div class="footer">
+    <!-- Made by <a href="https://github.com/ArnavGupta30" style="text-decoration: underline;">ArnavGupta30</a> | -->
+    <p>© 2023 Spectral Host | Socials @ <a href="https://socials.spectral.host/" style="text-decoration: underline;">socials.spectral.host</a> </p>
+  </div>
+</body>
+
+</html>

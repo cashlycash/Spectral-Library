@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEKS3FB751"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZEKS3FB751');
+  </script>
+
+  <title>Spectral Host</title>
+  <link rel="icon" href="/static/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Read the unspoken content now!">
+  <meta name="keywords" content="Spectral,host,PDF,Gallery,Unspoken,Content">
+  <meta name="author" content="Spectral.host">
+  <meta name="theme-color" content="#8c52ff">
+  <meta name="msapplication-navbutton-color" content="#8c52ff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#8c52ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Spectral Host">
+  <meta name="apple-mobile-web-app-title" content="Spectral Host">
+  <meta name="msapplication-starturl" content="https://www.spectral.host/">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8556022091859081" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="intro">
+    <h1>Spectral Host</h1>
+    <p>The unspoken library</p>
+  </div>
+  <ul>
+    <% for(let i=0; i<pdfs.length; i++) { %>
+    <li>
+      <a class="card hover" href="/pdf/<%= pdfs[i] %>">
+        <img src="/static/img/<%= pdfs[i].slice(0, -4) %>.png" />
+        <br />
+        <div style="margin-top: 10px;">
+          <span class="button"><%= pdfs[i].slice(0, -4) %></span>
+        </div>
+      </a>
+    </li>
+    <% } %>
+    <li>
+      <a class="card hover">
+        <img src="/static/soon.png" />
+        <br />
+        <div style="margin-top: 10px;">
+          <span class="button">Coming soon</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a class="card hover">
+        <img src="/static/soon.png" />
+        <br />
+        <div style="margin-top: 10px;">
+          <span class="button">Coming soon</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <div class="footer">
+    Made by <a href="https://github.com/ArnavGupta30" style="text-decoration: underline;">ArnavGupta30</a> | 
+    © 2023 Spectral Host | Socials @ <a href="https://socials.spectral.host/" style="text-decoration: underline;">socials.spectral.host</a>
+  </div>
+</body>
+
+</html>

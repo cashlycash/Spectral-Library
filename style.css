@@ -1,0 +1,105 @@
+body {
+  background-color: #4a0404; /* dark red */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4a0404; /* dark red */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
+}
+
+.image-card {
+  background-color: #ffe5e5; /* light red */
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #cfcfcf, -10px -10px 20px #ffffff;
+  margin: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-zoom {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-card:hover .image-zoom {
+  opacity: 1;
+}
+
+.image-zoom:before {
+  border: 3px solid white;
+  box-sizing: border-box;
+  content: "";
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transform: scale(0.5);
+  transition: transform 0.5s ease;
+}
+
+.image-card:hover .image-zoom:before {
+  transform: scale(1);
+}
+
+.image-zoom:after {
+  background-image: url("zoom-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  content: "";
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  opacity: 0.5;
+  transform: scale(0.5);
+  transition: transform 0.5s ease;
+}
+
+.image-card:hover .image-zoom:after {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
+  .image-card {
+    width: 90%;
+    height: 150px;
+  }
+}
